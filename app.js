@@ -1,4 +1,3 @@
-let allrest, allCusts;
 let alert1 = document.getElementById('alert1');
 let eError = document.getElementById('e_error');
 let pError = document.getElementById('p_error');
@@ -117,3 +116,26 @@ let login = () => {
         }
     }
 }
+
+function authStateListener() {
+    // [START auth_state_listener]
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            // User is signed in, see docs for a list of available properties
+            // https://firebase.google.com/docs/reference/js/firebase.User
+            userId = user.uid;
+            let cData = localStorage.getItem("Current User");
+            let cUser = JSON.parse(cData);
+            let type = cUser.Type;
+            if (type == "Customer") {
+                window.location.href = "./customer-panel.html";
+            } else {
+                window.location.href = "./restaurant-panel.html";
+            }
+        } else {
+
+        }
+    });
+    // [END auth_state_listener]
+}
+authStateListener();

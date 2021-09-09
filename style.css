@@ -35,12 +35,12 @@ body {
 }
 
 .container-fluid.body-div {
-    padding: 0px;
+    padding: 20px;
 }
 
 .div-flow {
     overflow: auto;
-    min-height: 50vh;
+    min-height: 80vh;
 }
 
 .main-div {
@@ -194,7 +194,7 @@ img.card-img-top {
 }
 
 .loading {
-    transform: translate(0px, 100px);
+    transform: translate(25vw, 25vh);
     color: black;
     text-shadow: none;
     text-align: center;
@@ -209,6 +209,11 @@ img.card-img-top {
     box-shadow: 3px 3px 10px 4px;
 }
 
+.user-cart-div {
+    overflow: auto;
+    min-height: 85vh;
+}
+
 .container-fluid.main {
     display: flex;
     background: url(https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
@@ -219,6 +224,7 @@ img.card-img-top {
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
+    overflow: auto;
 }
 
 .container-fluid.signup {
@@ -239,6 +245,7 @@ img.card-img-top {
     justify-content: space-evenly;
     margin: 20px 0px;
     flex-wrap: wrap;
+    min-width: 250px;
 }
 
 .rest-card-div {
@@ -261,14 +268,19 @@ h3.card-text.h3 {
     width: 100%;
 }
 
+.order-detail-div {
+    overflow: auto;
+}
+
 div#cust-orders {
     min-height: 90vh;
-    padding: 20px 0px;
+    padding: 20px;
     background: gainsboro;
     /* background-image: url(https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: auto;
 }
 
 .thead-dark th {
@@ -287,4 +299,18 @@ button {
 td,
 th {
     border: 2px solid black !important;
+}
+
+.card-text input {
+    text-align: center;
+    font-weight: 600;
+}
+
+.cloading {
+    transform: translate(50vw, 25vh);
+    max-width: fit-content;
+}
+
+.container-fluid.main-body-div {
+    padding: 0px;
 }
